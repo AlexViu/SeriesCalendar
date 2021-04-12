@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SeriesCalendar</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="loginhere">login here</string>
+    <string name="sign_up">sign up</string>
+    <string name="email">email</string>
+    <string name="sign_up2">Sign Up</string>
+    <string name="create_new_account">Create new account</string>
+</resources>
