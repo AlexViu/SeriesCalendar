@@ -15,6 +15,7 @@ import java.util.List;
 
 import javax.security.auth.login.LoginException;
 
+import static com.aledom.seriescalendar.Constants.ADD_SERIE_URL;
 import static com.aledom.seriescalendar.Constants.ERROR_PETITION;
 import static com.aledom.seriescalendar.Constants.SIGN_UP_URL;
 import static com.aledom.seriescalendar.Constants.SUCCESS_PETITION;
@@ -44,6 +45,33 @@ public class SerieRepository {
                     Log.i("PutData", responseModel.message);
                     throw new LoginException(responseModel.message);
                 }
+            }
+        }
+        throw new LoginException("Fallo");
+    }
+
+    public static Boolean addSerie(String name, String platform, String description) throws LoginException, JSONException{
+
+        String[] field = new String[3];
+        field[0] = "name";
+        field[1] = "platform";
+        field[2] = "description";
+        //Creating array for data
+        String[] data = new String[3];
+        data[0] = name;
+        data[1] = platform;
+        data[2] = description;
+
+        PutData putData = new PutData(ADD_SERIE_URL, "POST", field, data);
+        if (putData.startPut()) {
+            if (putData.onComplete()) {
+                ResponseModel responseModel = new Gson().fromJson(putData.getResult(), ResponseModel.class);
+
+                if (responseModel.status == 1) {
+                    return true;
+                }
+                Log.i("PutData", responseModel.message);
+                throw new LoginException(responseModel.message);
             }
         }
         throw new LoginException("Fallo");

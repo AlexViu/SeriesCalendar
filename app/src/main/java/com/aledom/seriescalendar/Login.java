@@ -67,7 +67,7 @@ public class Login extends AppCompatActivity {
                                 LoginRepository loginRepository = new LoginRepository();
                                 progress.setVisibility(View.GONE);
                                 if(loginRepository.login(username, password)) {
-                                    Intent intent = new Intent (getApplicationContext(), MainActivity.class);
+                                    Intent intent = new Intent (getApplicationContext(), MenuActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
