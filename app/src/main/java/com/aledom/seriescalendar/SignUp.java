@@ -82,7 +82,7 @@ public class SignUp extends AppCompatActivity {
                             }
 
 
-                           /* SerieRepository seriesRepository = new SerieRepository();
+                           /*SerieRepository seriesRepository = new SerieRepository();
                             progress.setVisibility(View.GONE);
                             try {
 

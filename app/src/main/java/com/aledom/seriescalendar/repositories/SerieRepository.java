@@ -17,6 +17,7 @@ import javax.security.auth.login.LoginException;
 
 import static com.aledom.seriescalendar.Constants.ADD_SERIE_URL;
 import static com.aledom.seriescalendar.Constants.ERROR_PETITION;
+import static com.aledom.seriescalendar.Constants.GET_SERIE_URL;
 import static com.aledom.seriescalendar.Constants.SIGN_UP_URL;
 import static com.aledom.seriescalendar.Constants.SUCCESS_PETITION;
 
@@ -24,17 +25,13 @@ public class SerieRepository {
 
     public List<SerieModel> getSeries() throws LoginException, JSONException {
 
-        String[] field = new String[3];
-        field[0] = "username";
-        field[1] = "password";
-        field[2] = "email";
-        //Creating array for data
-        String[] data = new String[3];
-        data[0] = "";
-        data[1] = "";
-        data[2] = "";
+        String[] field = new String[1];
+        field[0] = "name";
+        String[] data = new String[1];
+        data[0] = "name";
 
-        PutData putData = new PutData(SIGN_UP_URL, "POST", field, data);
+
+        PutData putData = new PutData(GET_SERIE_URL, "POST", field, data);
         if (putData.startPut()) {
             if (putData.onComplete()) {
                 ResponseModel responseModel = new Gson().fromJson(putData.getResult(), ResponseModel.class);
