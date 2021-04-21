@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AddSerie"></activity>
+        <activity android:name=".SerieDetailActivity"></activity>
+        <activity android:name=".AddSerie" />
         <activity android:name=".MainActivity$series" />
         <activity
             android:name=".MenuActivity"

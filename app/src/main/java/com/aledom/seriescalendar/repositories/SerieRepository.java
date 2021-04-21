@@ -18,7 +18,6 @@ import javax.security.auth.login.LoginException;
 import static com.aledom.seriescalendar.Constants.ADD_SERIE_URL;
 import static com.aledom.seriescalendar.Constants.ERROR_PETITION;
 import static com.aledom.seriescalendar.Constants.GET_SERIE_URL;
-import static com.aledom.seriescalendar.Constants.SIGN_UP_URL;
 import static com.aledom.seriescalendar.Constants.SUCCESS_PETITION;
 
 public class SerieRepository {

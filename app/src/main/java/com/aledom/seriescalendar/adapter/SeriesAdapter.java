@@ -1,5 +1,6 @@
 package com.aledom.seriescalendar.adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aledom.seriescalendar.R;
+import com.aledom.seriescalendar.SerieDetailActivity;
 import com.aledom.seriescalendar.models.SerieModel;
 import com.aledom.seriescalendar.repositories.SerieRepository;
 
@@ -36,16 +38,23 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.RecyclerHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerHolder holder, int position) {
-
+    public void onBindViewHolder(@NonNull final RecyclerHolder holder, int position) {
         try {
 
             listSeries = seriesRepository.getSeries();
-            SerieModel item = listSeries.get(position);
+            final SerieModel item = listSeries.get(position);
             holder.txtName.setText(item.name);
             holder.txtPlatform.setText(item.platform);
             holder.txtDescription.setText(item.description);
 
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(holder.itemView.getContext(), SerieDetailActivity.class);
+                    intent.putExtra("itemDetail", item);
+                    holder.itemView.getContext().startActivity(intent);
+                }
+            });
         } catch (LoginException error){
             System.out.println(error.getMessage());
         } catch (JSONException e) {

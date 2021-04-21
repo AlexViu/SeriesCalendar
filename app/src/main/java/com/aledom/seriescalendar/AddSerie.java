@@ -30,6 +30,7 @@ public class AddSerie extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_serie);
+        setTitle("Añadir serie");
 
         EditTextName = findViewById(R.id.name);
         EditTextPlatform = findViewById(R.id.platform);

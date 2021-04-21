@@ -27,4 +27,6 @@
     <string name="descripcion">Descripcion</string>
     <string name="a_adir_serie">Añadir Serie</string>
     <string name="volver_a_series">Volver a series</string>
+    <string name="nombre_de_la_serie">Nombre de la serie:</string>
+    <string name="descripcion_de_la_serie">Descripcion de la serie:</string>
 </resources>
