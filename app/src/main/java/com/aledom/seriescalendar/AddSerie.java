@@ -23,7 +23,6 @@ public class AddSerie extends AppCompatActivity {
 
     TextInputEditText EditTextName, EditTextPlatform, EditTextDescription;
     Button buttonAdd;
-    TextView textViewSerie;
     ProgressBar progress;
 
     @Override
@@ -31,22 +30,14 @@ public class AddSerie extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_serie);
         setTitle("Añadir serie");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         EditTextName = findViewById(R.id.name);
         EditTextPlatform = findViewById(R.id.platform);
         EditTextDescription = findViewById(R.id.description);
         buttonAdd = findViewById(R.id.buttonAdd);
-        textViewSerie = findViewById(R.id.seriesText);
         progress = findViewById(R.id.progress);
 
-        textViewSerie.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (getApplicationContext(), MenuActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,5 +76,11 @@ public class AddSerie extends AppCompatActivity {
             }
 
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return false;
     }
 }

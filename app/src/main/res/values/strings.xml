@@ -29,4 +29,6 @@
     <string name="volver_a_series">Volver a series</string>
     <string name="nombre_de_la_serie">Nombre de la serie:</string>
     <string name="descripcion_de_la_serie">Descripcion de la serie:</string>
+    <string name="a_adir_temporada">Añadir temporada</string>
+    <string name="plataforma_de_la_serie">Plataforma donde visualizar la serie:</string>
 </resources>
