@@ -83,8 +83,4 @@ public class SeriesFragment extends Fragment {
 
         return root;
     }
-
-    private void initViews() {
-
-    }
 }

@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +32,7 @@ public class SerieDetailActivity extends AppCompatActivity {
     private List<SeasonModel> listSeason;
     private TextView textviewName, textviewDescription, textviewPletaform;
     private SerieModel serieDetail;
+    private Button btnAddSeason;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,7 @@ public class SerieDetailActivity extends AppCompatActivity {
         textviewDescription = findViewById(R.id.descriptionDetail);
         textviewPletaform = findViewById(R.id.platformDetail);
         recyclerView = findViewById(R.id.rvSeason);
+        btnAddSeason = findViewById(R.id.btnAddSeason);
 
 
         textviewName.setText(serieDetail.getName());
@@ -69,6 +73,16 @@ public class SerieDetailActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        btnAddSeason.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getApplicationContext(), AddSeason.class);
+                String id_series = String.valueOf(serieDetail.getId());
+                intent.putExtra("id_serie", id_series);
+                startActivity(intent);
+                finish();
+            }
+        });
 
     }
 

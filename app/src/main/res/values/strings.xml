@@ -31,4 +31,5 @@
     <string name="descripcion_de_la_serie">Descripcion de la serie:</string>
     <string name="a_adir_temporada">Añadir temporada</string>
     <string name="plataforma_de_la_serie">Plataforma donde visualizar la serie:</string>
+    <string name="nombre_de_temporada">Nombre de temporada</string>
 </resources>
