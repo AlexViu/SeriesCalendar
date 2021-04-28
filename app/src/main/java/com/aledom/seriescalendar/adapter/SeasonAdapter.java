@@ -1,6 +1,7 @@
 package com.aledom.seriescalendar.adapter;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,14 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.aledom.seriescalendar.R;
 
-import com.aledom.seriescalendar.SerieDetailActivity;
+import com.aledom.seriescalendar.SeasonDetailActivity;
 import com.aledom.seriescalendar.models.SeasonModel;
-import com.aledom.seriescalendar.models.SerieModel;
 import com.aledom.seriescalendar.repositories.SeasonRepository;
 
 
 import org.json.JSONException;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.security.auth.login.LoginException;
@@ -39,13 +40,22 @@ public class SeasonAdapter extends RecyclerView.Adapter<SeasonAdapter.RecyclerHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final RecyclerHolder holder, int position) {
 
         try {
 
             final SeasonModel item = listSeason.get(position);
             listSeason = seasonRepository.getSeason(item.id_serie);
             holder.tvName.setText(item.name);
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(holder.itemView.getContext(), SeasonDetailActivity.class);
+                    intent.putExtra("itemDetail", item);
+                    holder.itemView.getContext().startActivity(intent);
+                }
+            });
 
         } catch (LoginException error){
             System.out.println(error.getMessage());

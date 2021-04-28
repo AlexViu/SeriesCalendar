@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AddSeason"></activity>
+        <activity android:name=".AddChapter"></activity>
+        <activity android:name=".SeasonDetailActivity" />
+        <activity android:name=".AddSeason" />
         <activity android:name=".SerieDetailActivity" />
         <activity android:name=".AddSerie" />
         <activity android:name=".MainActivity$series" />

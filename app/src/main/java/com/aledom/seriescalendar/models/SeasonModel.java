@@ -1,6 +1,8 @@
 package com.aledom.seriescalendar.models;
 
-public class SeasonModel {
+import java.io.Serializable;
+
+public class SeasonModel implements Serializable {
     public int id;
     public int id_serie;
     public String name;
