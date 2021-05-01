@@ -10,15 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="128e4b9f-4df6-41ff-a373-d807d2665bc1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/AddChapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/SeasonDetailActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/adapter/ChapterAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/models/ChapterModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/repositories/ChapterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_date.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_number.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_chapter.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_season_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/models/SesionModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -29,14 +21,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/adapter/SeasonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/adapter/SeasonAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/models/SeasonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/models/SeasonModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_list_chapter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_list_chapter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/MenuActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/MenuActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/SerieDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/SerieDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/SignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/repositories/LoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/aledom/seriescalendar/repositories/LoginRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_serie_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_serie_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_list_series.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_list_series.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,10 +188,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="477" y="252" key="#PSD/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618003462790" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1619637593537">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1619872081916">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619637593537" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619872081916" />
     <state x="580" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1618057262026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -221,10 +216,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618784514169" />
-    <state x="818" y="333" key="AndroidCreateXmlResourceDialog" timestamp="1619644828928">
+    <state x="818" y="333" key="AndroidCreateXmlResourceDialog" timestamp="1619867632642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="818" y="333" key="AndroidCreateXmlResourceDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619644828928" />
+    <state x="818" y="333" key="AndroidCreateXmlResourceDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619867632642" />
     <state x="815" y="285" key="AndroidProcessChooserDialog" timestamp="1618062020601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -233,42 +228,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="454" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618757551561" />
-    <state width="1877" height="265" key="GridCell.Tab.0.bottom" timestamp="1619647887057">
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom" timestamp="1619878985930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619647887057" />
-    <state width="1877" height="265" key="GridCell.Tab.0.center" timestamp="1619647887057">
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619878985930" />
+    <state width="1877" height="286" key="GridCell.Tab.0.center" timestamp="1619878985930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="265" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619647887057" />
-    <state width="1877" height="265" key="GridCell.Tab.0.left" timestamp="1619647887057">
+    <state width="1877" height="286" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619878985930" />
+    <state width="1877" height="286" key="GridCell.Tab.0.left" timestamp="1619878985930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="265" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619647887057" />
-    <state width="1877" height="265" key="GridCell.Tab.0.right" timestamp="1619647887057">
+    <state width="1877" height="286" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619878985930" />
+    <state width="1877" height="286" key="GridCell.Tab.0.right" timestamp="1619878985930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="265" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619647887057" />
-    <state width="1877" height="286" key="GridCell.Tab.1.bottom" timestamp="1619647887054">
+    <state width="1877" height="286" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619878985930" />
+    <state width="1877" height="286" key="GridCell.Tab.1.bottom" timestamp="1619878985931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619647887054" />
-    <state width="1877" height="286" key="GridCell.Tab.1.center" timestamp="1619647887053">
+    <state width="1877" height="286" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619878985931" />
+    <state width="1877" height="286" key="GridCell.Tab.1.center" timestamp="1619878985930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619647887053" />
-    <state width="1877" height="286" key="GridCell.Tab.1.left" timestamp="1619647887053">
+    <state width="1877" height="286" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619878985930" />
+    <state width="1877" height="286" key="GridCell.Tab.1.left" timestamp="1619878985930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619647887053" />
-    <state width="1877" height="286" key="GridCell.Tab.1.right" timestamp="1619647887053">
+    <state width="1877" height="286" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619878985930" />
+    <state width="1877" height="286" key="GridCell.Tab.1.right" timestamp="1619878985931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619647887053" />
-    <state x="1968" y="0" width="1590" height="733" maximized="true" key="dock-window-1" timestamp="1619646024582">
+    <state width="1877" height="286" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619878985931" />
+    <state x="1920" y="85" width="1542" height="733" key="dock-window-1" timestamp="1619873677990">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1968" y="0" width="1590" height="733" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619646024582" />
+    <state x="1920" y="85" width="1542" height="733" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1619873677990" />
     <state x="251" y="-20" width="1623" height="843" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1618142692362" />
     <state x="2370" y="-9" width="1541" height="1026" maximized="true" key="dock-window-2" timestamp="1619469797691">
       <screen x="1920" y="0" width="1920" height="1040" />

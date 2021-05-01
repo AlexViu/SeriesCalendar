@@ -36,4 +36,5 @@
     <string name="nombre_del_capitulo">Nombre del capitulo</string>
     <string name="fecha_de_estreno">Fecha de estreno</string>
     <string name="a_adir_capitulo">Añadir capitulo</string>
+    <string name="a_adir_a_favoritos">Añadir a favoritos</string>
 </resources>

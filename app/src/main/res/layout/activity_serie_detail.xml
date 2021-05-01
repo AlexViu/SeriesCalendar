@@ -7,6 +7,8 @@
     android:orientation="vertical"
     tools:context=".SerieDetailActivity">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/nav_header_height"
@@ -74,25 +76,29 @@
         android:background="@color/backgroundColor"
         android:orientation="vertical">
 
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnAddSeason"
-            android:layout_width="200dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="4dp"
-            android:text="@string/a_adir_temporada"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnAddChapter"
-            android:layout_width="202dp"
-            android:layout_height="47dp"
-            android:layout_marginTop="4dp"
-            android:text="Añadir capitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_add"
+            tools:ignore="VectorDrawableCompat" />
+
+        <Button
+            android:id="@+id/btnAddFavorite"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/a_adir_a_favoritos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

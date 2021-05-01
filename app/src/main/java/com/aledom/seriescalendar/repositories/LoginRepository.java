@@ -1,21 +1,34 @@
 package com.aledom.seriescalendar.repositories;
 
 import android.content.Intent;
+import android.text.Editable;
 import android.util.Log;
 import android.view.View;
+
+import com.aledom.seriescalendar.models.ChapterModel;
+import com.aledom.seriescalendar.models.SeasonModel;
+import com.aledom.seriescalendar.models.SesionModel;
 import com.google.gson.Gson;
 import android.widget.Toast;
 
 import com.aledom.seriescalendar.MainActivity;
 import com.aledom.seriescalendar.models.ResponseModel;
+import com.google.gson.reflect.TypeToken;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 import org.json.JSONException;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.security.auth.login.LoginException;
 
+import static com.aledom.seriescalendar.Constants.ERROR_PETITION;
+import static com.aledom.seriescalendar.Constants.GET_SEASON_URL;
+import static com.aledom.seriescalendar.Constants.GET_SESION_URL;
 import static com.aledom.seriescalendar.Constants.LOGIN_URL;
 import static com.aledom.seriescalendar.Constants.SIGN_UP_URL;
+import static com.aledom.seriescalendar.Constants.SUCCESS_PETITION;
 
 public class LoginRepository{
 
@@ -81,6 +94,29 @@ public class LoginRepository{
                 }
                 Log.i("PutData", responseModel.message);
                 throw new LoginException(responseModel.message);
+            }
+        }
+        throw new LoginException("Fallo");
+    }
+
+    public List<SesionModel> getSesion(String username) throws LoginException, JSONException {
+
+        String[] field = new String[1];
+        field[0] = "username";
+        String[] data = new String[1];
+        data[0] = username;
+
+        PutData putData = new PutData(GET_SESION_URL, "POST", field, data);
+        if (putData.startPut()) {
+            if (putData.onComplete()) {
+                ResponseModel responseModel = new Gson().fromJson(putData.getResult(), ResponseModel.class);
+                if (responseModel.status == SUCCESS_PETITION) {
+                    List<SesionModel> sessionResource = new Gson().fromJson(responseModel.response, new TypeToken<ArrayList<SesionModel>>() {}.getType());
+                    return sessionResource;
+                } else if (responseModel.status == ERROR_PETITION) {
+                    Log.i("PutData", responseModel.message);
+                    throw new LoginException(responseModel.message);
+                }
             }
         }
         throw new LoginException("Fallo");

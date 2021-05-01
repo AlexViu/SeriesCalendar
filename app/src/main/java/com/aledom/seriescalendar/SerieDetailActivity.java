@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +20,7 @@ import com.aledom.seriescalendar.models.SeasonModel;
 import com.aledom.seriescalendar.models.SerieModel;
 import com.aledom.seriescalendar.repositories.SeasonRepository;
 import com.aledom.seriescalendar.repositories.SerieRepository;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONException;
 
@@ -32,7 +35,7 @@ public class SerieDetailActivity extends AppCompatActivity {
     private List<SeasonModel> listSeason;
     private TextView textviewName, textviewDescription, textviewPletaform;
     private SerieModel serieDetail;
-    private Button btnAddSeason;
+    private FloatingActionButton btnAddSeason;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,4 +94,5 @@ public class SerieDetailActivity extends AppCompatActivity {
         onBackPressed();
         return false;
     }
+
 }

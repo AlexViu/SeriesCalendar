@@ -80,22 +80,6 @@ public class SignUp extends AppCompatActivity {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-
-
-                           /*SerieRepository seriesRepository = new SerieRepository();
-                            progress.setVisibility(View.GONE);
-                            try {
-
-                                List<SerieModel> listSeries = seriesRepository.getSeries();
-                                SerieModel serie = listSeries.get(0);
-
-                                System.out.println(serie.name);
-                                System.out.println(serie.description);
-                            } catch (LoginException error){
-                                Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }*/
                         }
                     });
                 } else {
