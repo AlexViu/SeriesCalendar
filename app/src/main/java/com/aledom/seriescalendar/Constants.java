@@ -12,6 +12,8 @@ public class Constants {
     public static String ADD_SEASON_URL = BASE_URL + "addSeason.php";
     public static String GET_CHAPTER_URL = BASE_URL + "getchapter.php";
     public static String ADD_CHAPTER_URL = BASE_URL + "addchapter.php";
+    public static String ADD_FAVORITE_URL = BASE_URL + "addfavorite.php";
+    public static String GET_FAVORITE_URL = BASE_URL + "getfavorite.php";
     public static int SUCCESS_PETITION = 1;
     public static int ERROR_PETITION = 0;
 

@@ -36,6 +36,8 @@ public class SerieDetailActivity extends AppCompatActivity {
     private TextView textviewName, textviewDescription, textviewPletaform;
     private SerieModel serieDetail;
     private FloatingActionButton btnAddSeason;
+    private Button btnAddFavorite;
+    private String idUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +54,7 @@ public class SerieDetailActivity extends AppCompatActivity {
         textviewPletaform = findViewById(R.id.platformDetail);
         recyclerView = findViewById(R.id.rvSeason);
         btnAddSeason = findViewById(R.id.btnAddSeason);
-
+        btnAddFavorite = findViewById(R.id.btnAddFavorite);
 
         textviewName.setText(serieDetail.getName());
         textviewDescription.setText(serieDetail.getDescription());
@@ -86,6 +88,39 @@ public class SerieDetailActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        btnAddFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SerieRepository serieRepository = new SerieRepository();
+
+                try {
+                    cargarPreferencias();
+                    String id_series = String.valueOf(serieDetail.getId());
+                    if(serieRepository.addFavorite(idUsuario, id_series)) {
+                        Intent intent = new Intent (getApplicationContext(), MenuActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                } catch (LoginException error){
+                    Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+    }
+
+    /**
+     * Cargar sesion guardada
+     */
+    private void cargarPreferencias() {
+        SharedPreferences preferences = getSharedPreferences("credenciales", Context.MODE_PRIVATE);
+
+        String id_usuario = preferences.getString("id", "No existe");
+
+        idUsuario = id_usuario;
 
     }
 
