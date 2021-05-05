@@ -9,12 +9,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aledom.seriescalendar.ChapterComment;
 import com.aledom.seriescalendar.R;
-import com.aledom.seriescalendar.SeasonDetailActivity;
 import com.aledom.seriescalendar.models.ChapterModel;
-import com.aledom.seriescalendar.models.SeasonModel;
 import com.aledom.seriescalendar.repositories.ChapterRepository;
-import com.aledom.seriescalendar.repositories.SeasonRepository;
 
 import org.json.JSONException;
 
@@ -39,7 +37,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.Recycler
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final RecyclerHolder holder, int position) {
 
         try {
 
@@ -53,6 +51,14 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.Recycler
             holder.tvDescription.setText(item.description);
             holder.tvDate.setText(item.date);
 
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(holder.itemView.getContext(), ChapterComment.class);
+                    intent.putExtra("itemDetail", item);
+                    holder.itemView.getContext().startActivity(intent);
+                }
+            });
         } catch (LoginException error){
             System.out.println(error.getMessage());
         } catch (JSONException e) {
