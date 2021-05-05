@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -30,9 +31,10 @@ import java.util.List;
 
 import javax.security.auth.login.LoginException;
 
-public class SeriesFragment extends Fragment {
+public class SeriesFragment extends Fragment implements SearchView.OnQueryTextListener {
     FloatingActionButton btnAddSerie;
     private SeriesViewModel seriesViewModel;
+    private SearchView svSearch;
     private RecyclerView recyclerView;
     private SeriesAdapter seriesAdapter;
     private List<SerieModel> listSeries;
@@ -47,6 +49,7 @@ public class SeriesFragment extends Fragment {
         btnAddSerie = root.findViewById(R.id.btnAddSerie);
         recyclerView = root.findViewById(R.id.list_item);
         progress = root.findViewById(R.id.progressBar);
+        svSearch = root.findViewById(R.id.svSearch);
 
         SerieRepository seriesRepository = new SerieRepository();
         /**
@@ -81,6 +84,24 @@ public class SeriesFragment extends Fragment {
             }
         });
 
+        svSearch.setOnQueryTextListener(this);
+
         return root;
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    /**
+     * Cada vez que se escriba se actualiza la lista
+     * @param newText
+     * @return
+     */
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        seriesAdapter.filter(newText);
+        return false;
     }
 }

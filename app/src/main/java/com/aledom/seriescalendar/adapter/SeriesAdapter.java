@@ -1,6 +1,7 @@
 package com.aledom.seriescalendar.adapter;
 
 import android.content.Intent;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,16 +19,21 @@ import com.aledom.seriescalendar.repositories.SerieRepository;
 
 import org.json.JSONException;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.security.auth.login.LoginException;
 
 public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.RecyclerHolder> {
     SerieRepository seriesRepository = new SerieRepository();
     private List<SerieModel> listSeries;
+    private  List<SerieModel> originalSeries;
 
     public SeriesAdapter(List<SerieModel> items) {
         this.listSeries = items;
+        this.originalSeries = new ArrayList<>();
+        originalSeries.addAll(items);
     }
 
     @NonNull
@@ -66,6 +72,33 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.RecyclerHo
     @Override
     public int getItemCount() {
         return listSeries.size();
+    }
+
+    /**
+     * Metodo para hacer busqueda
+     * @param strSearch
+     */
+    public void filter(final String strSearch) {
+        if (strSearch.length() == 0) {
+            listSeries.clear();
+            listSeries.addAll(originalSeries);
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                listSeries.clear();
+                List<SerieModel> collect = originalSeries.stream()
+                        .filter(i -> i.getName().toLowerCase().contains(strSearch))
+                        .collect(Collectors.toList());
+
+                listSeries.addAll(collect);
+            } else {
+                for (SerieModel i : originalSeries) {
+                    if (i.getName().toLowerCase().contains(strSearch)) {
+                        listSeries.add(i);
+                    }
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 
     public static class RecyclerHolder extends RecyclerView.ViewHolder {
